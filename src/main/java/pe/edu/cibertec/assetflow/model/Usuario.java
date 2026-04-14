@@ -35,7 +35,7 @@ public class Usuario {
     @Column(length = 20)
     private String estado;
 
-    // un usuario puede tener muchos prestamos
+
     @JsonIgnore
     @OneToMany(mappedBy = "usuario")
     private List<Prestamo> prestamos;

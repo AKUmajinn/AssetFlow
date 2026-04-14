@@ -4,4 +4,4 @@ import org.springframework.stereotype.Repository;
 import pe.edu.cibertec.assetflow.model.Usuario;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usuario, Integer> { }
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> { } 

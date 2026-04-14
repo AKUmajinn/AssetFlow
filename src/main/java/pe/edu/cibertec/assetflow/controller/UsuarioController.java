@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuarios")
-@CrossOrigin(origins = "http://localhost:4200") // Esto está perfecto
+@CrossOrigin(origins = "http://localhost:4200") 
 public class UsuarioController {
 
     @Autowired
@@ -24,11 +24,10 @@ public class UsuarioController {
         return service.guardarUsuario(u);
     }
 
-    // CORRECCIÓN 1: En el @PutMapping es buena práctica recibir el ID en la URL
-    // para asegurar que estamos editando el registro correcto.
+
     @PutMapping("/{id}")
     public Usuario editar(@PathVariable Integer id, @RequestBody Usuario u) {
-        // Nos aseguramos de que el objeto tenga el ID que viene en la ruta
+
         u.setId(id); 
         return service.guardarUsuario(u);
     }
