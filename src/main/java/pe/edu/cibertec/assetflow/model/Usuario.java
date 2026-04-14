@@ -31,6 +31,9 @@ public class Usuario {
     
     @Column(length = 50)
     private String rol;
+    
+    @Column(length = 20)
+    private String estado;
 
     // un usuario puede tener muchos prestamos
     @JsonIgnore
